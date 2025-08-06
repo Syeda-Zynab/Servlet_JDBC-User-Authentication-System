@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Register</title></head>
+<body>
+    <h2>Please Register yourself</h2>
+    <form action="register" method="post">
+        Username: <input type="text" name="username" required><br>
+        Password: <input type="password" id="password" name="password" required ><br>
+        <input type="checkbox" onclick="togglePassword()"> Show Password<br><br>
+        <input type="submit" value="Register">
+    </form>
+    <script>
+    function togglePassword() {
+        var pwd = document.getElementById("password");
+        if (pwd.type === "password") {
+            pwd.type = "text";
+        } else {
+            pwd.type = "password";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><title>Login</title></head>
+<body>
+    <h2>Login</h2>
+    <h3>Enter your credentials</h3>
+    <form action="login" method="post">
+        Username: <input type="text" name="username" required><br>
+        Password: <input type="password" name="password" id="password" required><br>
+        
+        <input type="checkbox" onclick="togglePassword()"> Show Password<br><br>
+        <input type="submit" value="Login">
+        
+    </form>
+    
+    <script>
+    function togglePassword() {
+        var pwd = document.getElementById("password");
+        if (pwd.type === "password") {
+            pwd.type = "text";
+        } else {	
+            pwd.type = "password";
+        }
+    }
+</script>
+</body>
+</html>
